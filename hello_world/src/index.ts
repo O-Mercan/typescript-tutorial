@@ -14,7 +14,21 @@
 // let numbers: number[] = []
 // numbers.forEach(n => n.toExponential)
 
-//Tuples
+// Tuples
 //tuple can contain different types of variable
-let user: [number, string] = [1, "Mosh"]
-user.push(1);
+// let user: [number, string] = [1, "Mosh"]
+// user.push(1);
+
+// Enums
+const small = 1;
+const medium = 2;
+const large = 3;
+
+//PascalCase
+enum Size {
+    Small = 1,
+    Medium = 2,
+    Large = 3
+};
+let mySize: Size = Size.Medium;
+console.log(mySize);
