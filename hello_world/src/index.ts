@@ -10,5 +10,11 @@
 // }
 
 // Arrays
-let numbers: number[] = []
-numbers.forEach(n => n.toExponential)
+//The elements of the array must be of the same type
+// let numbers: number[] = []
+// numbers.forEach(n => n.toExponential)
+
+//Tuples
+//tuple can contain different types of variable
+let user: [number, string] = [1, "Mosh"]
+user.push(1);

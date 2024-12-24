@@ -1,4 +1,4 @@
 "use strict";
-let numbers = [];
-numbers.forEach(n => n.toExponential);
+let user = [1, "Mosh"];
+user.push(1);
 //# sourceMappingURL=index.js.map
