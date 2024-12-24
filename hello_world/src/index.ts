@@ -90,18 +90,24 @@
 
 
 // Intersection
+// type Draggable = {
+//     drag: () => void
+// };
 
-type Draggable = {
-    drag: () => void
-};
+// type Resizable = {
+//     resize: () => void
+// }
 
-type Resizable = {
-    resize: () => void
-}
+// type UIWidget = Draggable & Resizable;
 
-type UIWidget = Draggable & Resizable;
+// let textBox: UIWidget = {
+//     drag: () => {},
+//     resize: () => {}
+// }
 
-let textBox: UIWidget = {
-    drag: () => {},
-    resize: () => {}
-}
+// Literal types
+// Literal (exact, specifix)
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metric = "cm" | "inch";
