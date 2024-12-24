@@ -9,6 +9,7 @@
 //     console.log(document);
 // }
 
+
 // Arrays
 //The elements of the array must be of the same type
 // let numbers: number[] = []
@@ -18,6 +19,7 @@
 //tuple can contain different types of variable
 // let user: [number, string] = [1, "Mosh"]
 // user.push(1);
+
 
 // Enums
 // const small = 1;
@@ -33,6 +35,7 @@
 // let mySize: Size = Size.Medium;
 // console.log(mySize);
 
+
 //functions
 // function calculateTax(income: number, taxYear= 2022): number {
 //     if (taxYear < 2022)
@@ -41,6 +44,7 @@
 // }
 
 // calculateTax(10_000);
+
 
 //Objects
 // let employee: {
@@ -71,14 +75,33 @@
 //     }
 // }
 
+
 //Union Types
-function kgToLbs(weight: number | string): number {
-    //Narrowing
-    if (typeof weight === "number")
-        return weight * 2.2;
-    else
-    return parseInt(weight) * 2.2;
+// function kgToLbs(weight: number | string): number {
+//     //Narrowing
+//     if (typeof weight === "number")
+//         return weight * 2.2;
+//     else
+//     return parseInt(weight) * 2.2;
+// }
+
+// kgToLbs(10);
+// kgToLbs("10kg");
+
+
+// Intersection
+
+type Draggable = {
+    drag: () => void
+};
+
+type Resizable = {
+    resize: () => void
 }
 
-kgToLbs(10);
-kgToLbs("10kg");
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+}
